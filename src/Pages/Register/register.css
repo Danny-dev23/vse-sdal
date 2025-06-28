@@ -1,0 +1,249 @@
+.form {
+  padding: 40px 0px;
+  background: #eaebed;
+}
+
+.form-reg {
+  background: white;
+  border-radius: 10px;
+  padding-top: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10227);
+}
+
+.form-register__title {
+  font-size: 24px;
+  line-height: 1.3;
+  color: #333;
+  font-weight: 900;
+  padding: 22px 0px 10px 45px;
+}
+
+.form-register__title-line {
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-size {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 29px 40px 30px;
+}
+
+.form-register__check {
+  margin-top: 10px;
+}
+
+.form-register__check > span:nth-child(2) {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #333;
+  opacity: 0.6;
+  line-height: 1.2 !important;
+  display: block;
+}
+
+.form-register__input {
+  width: 100% !important;
+  margin: 20px 0px 0px 0px !important;
+}
+
+.form-register__select {
+  border: 1px solid #c6c6c6 !important;
+  padding: 10px 0px 10px 20px !important;
+  border-radius: 5px;
+}
+
+.form-register__select-label {
+  left: 20px !important;
+  top: 15px !important;
+}
+
+.form-register__button {
+  width: 255px;
+  background: #0d5e1b;
+  color: white;
+  font-weight: 700;
+  padding: 16px 24px 14px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: allease 0.3s;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.form-register__select-options::before {
+  border-bottom: none !important;
+}
+.form-register__select-options::after {
+  border-bottom: none !important;
+}
+.form-register__select-options {
+  margin-top: 0px !important;
+  padding-top: 16px;
+}
+
+.css-64gc45-MuiSvgIcon-root-MuiNativeSelect-icon {
+  border-left: 1px solid gray !important;
+  margin-right: 10px !important;
+  padding-left: 10px;
+  font-size: 1.5em !important;
+  width: 2em !important;
+  height: 2em !important;
+  top: calc(50% - 1em) !important;
+}
+
+.form-register__select-options__option {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.error {
+  margin: 0px;
+  color: red;
+}
+
+.form-code__ul {
+  padding-left: 0px;
+}
+
+.form-code {
+  min-height: 600px;
+  background: white;
+  width: 100%;
+}
+
+.form-code__title {
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+.form-code__description {
+  padding-left: 40px;
+}
+
+/* .form-code__line {
+
+} */
+
+.form-code__block {
+  padding-left: 60px;
+  padding-right: 40px;
+}
+
+.form-code__block-text span {
+  font-weight: 900;
+}
+
+.form-code__inputs {
+  display: flex;
+  align-items: center;
+}
+
+.form-code__input {
+  padding: 15px 15px;
+  color: #333;
+  font-size: 16px;
+  line-height: 18px;
+  outline: none;
+  width: 460px;
+  margin-right: 25px;
+  border-radius: 10px;
+  border: 2px solid #c6c6c6;
+}
+
+.form-control__btn {
+  width: 280px;
+  padding: 15px;
+  border-radius: 30px;
+  background: #0d5e1b;
+  color: white;
+  border: 2px solid #0d5e1b;
+  text-transform: uppercase;
+}
+
+.form-code__ul {
+  margin-top: 10px;
+}
+.form-code__text {
+  list-style: none;
+  padding-left: 20px;
+  margin: 10px 0px;
+}
+
+.form-code__text-btn {
+  border: 2px solid #3587e4;
+  color: #3587e4;
+  background: transparent;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.form-passowrd__form {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  margin: 0 auto;
+}
+
+.form-password {
+  background: white;
+  padding-bottom: 60px;
+  border-radius: 15px;
+}
+
+.form-password__title {
+  padding: 20px 0px 0px 40px;
+}
+
+.form-password__form-title {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.form-password__input {
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: 2px solid #c6c6c6;
+  outline: none;
+  width: 100%;
+}
+
+.form-password__btn {
+  border: 2px solid #0d5e1b;
+  background: #0d5e1b;
+  color: white;
+  padding: 15px 0px;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+.form-password__form-input__block {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 20px;
+  top: 7px;
+  font-size: 21px;
+}

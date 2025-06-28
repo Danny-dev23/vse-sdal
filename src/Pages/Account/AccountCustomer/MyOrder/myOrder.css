@@ -1,0 +1,75 @@
+.myorder {
+  background: white;
+  margin-left: 20px;
+}
+
+.myorder-text {
+  padding: 40px 40px 1% 40px;
+}
+
+.myorder-search {
+  padding: 20px 40px;
+}
+
+.search-bar {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.search-bar > div > div > div > input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.myorder-list {
+  padding: 20px 40px;
+}
+
+.myorder-table__header {
+  color: #999;
+  font-size: 0.8571rem;
+}
+
+.myorder-list__item {
+  border-top: 1px solid #f0f0f0;
+  padding: 20px 0px;
+}
+
+.myorder-table {
+  width: 100%;
+}
+
+.myorder-table__cell-title {
+  margin-bottom: 0px;
+  color: #999;
+}
+
+.myorder-table__cell {
+  border-top: 1px solid #ddd;
+  padding: 20px 0px;
+  margin-top: 15px;
+}
+
+.myorder-table__cell-description {
+  margin-bottom: 0;
+}
+
+.myorder-table__cell-deadline {
+  background: #6dbf6e;
+  font-size: 0.8571rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.myorder-table__cell-chat {
+  color: #999;
+  margin-bottom: 0;
+}
+
+.myorder-table__cell-status {
+  font-size: .8571rem;
+}

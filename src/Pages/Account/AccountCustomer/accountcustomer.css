@@ -1,0 +1,60 @@
+
+.account-custom__tabs {
+  background: #F1F2F4;
+  padding: 40px 0px 60px 0px;
+}
+
+
+
+
+.account-custom__tabs-tab > div > div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.account-custom__tabs-box {
+  display: flex;
+
+}
+
+.css-1qltlow-MuiTabs-indicator {
+  display: none;
+}
+.account-custom__tabs-tab__label {
+  align-items: start !important;
+  font-weight: 700 !important;
+  text-transform: inherit !important;
+  padding: 0px !important;
+  padding-left: 33px !important;
+}
+
+.account-custom__new-order {
+  background: #0d5e1b !important;
+  color: white !important;
+  border-radius: 25px !important;
+  padding: 0px !important;
+  padding-left: 33px !important;
+  align-items: start !important;
+}
+
+.account-custom__new-order.active {
+  color: #0d5e1b !important;
+}
+.account-custom__new-order.active:nth-child(1) {
+  color: white !important;
+}
+
+.account-custom__tabs-tab__label:nth-child(2) {
+  margin: 10px 0px 20px 0px;
+}
+
+.account-custom__tabs-title {
+  margin-bottom: 0;
+  text-align: left !important;
+}
+
+.account-custom__tabs-panel {
+  width: 80%;
+  background: white;
+}

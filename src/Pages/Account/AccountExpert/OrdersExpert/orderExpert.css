@@ -1,0 +1,94 @@
+.order-expert__check-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки одинаковой ширины */
+  /* gap: 5px; Зазор между элементами, можно настроить */
+  padding-left: 0;
+}
+
+.order-search__container {
+  background: white;
+  padding-bottom: 40px;
+}
+
+.order-search__title {
+  padding: 40px 0px 20px 40px;
+  font-family: Roboto, sans-serif;
+  font-size: 1.7143rem;
+  font-weight: 900;
+}
+
+.order-search__box {
+  padding: 0px 40px;
+  margin-top: 20px;
+}
+
+.filter-box {
+  padding: 20px;
+  background: rgba(255, 249, 230, 0.8);
+  margin: 0px 40px 20px 40px;
+}
+
+.filter-box__title {
+  font-size: 1.1429rem;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.filter-options {
+  display: flex;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.button-group__remove {
+  background: transparent;
+  color: #3385e4;
+  border: none;
+  padding: 7px 21px;
+}
+.button-group__text {
+  font-size: 1.1429rem;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.checkbox-group > label {
+  display: block;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.order-search-box__svg {
+  cursor: pointer;
+  border-left: 1px solid rgb(153, 153, 153);
+  padding-left: 15px;
+  box-sizing: content-box;
+  font-size: 35px;
+}
+
+.order-expert__check {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100%;
+}
+
+.order-expert__check > span {
+  font-size: 12px;
+  padding: 4px;
+}
+
+

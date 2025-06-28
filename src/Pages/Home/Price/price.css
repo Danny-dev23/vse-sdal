@@ -1,0 +1,119 @@
+.price {
+  background: #d8ecff;
+  padding-top: 120px;
+}
+
+.price-block {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.price-block__images-text {
+  padding-left: 87px;
+}
+
+.price-block__images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.price-block__image-title {
+  font-family: RoundPro, sans-serif;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 23px;
+  padding-top: 45px;
+}
+
+.price-block__image-description {
+  font-size: 18px;
+  color: rgba(51, 51, 51, 0.5);
+  line-height: 1.667;
+}
+
+.price-block__conditions {
+  padding-bottom: 120px;
+}
+
+.price-block__conditions-box {
+  padding: 23px 20px 20px 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 10px 0px;
+  width: 500px;
+}
+
+.price-block__conditions-box__items-box__button-btn {
+  padding: 10px 15px 9px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #fff;
+  border: 2px solid #0d5e1b;
+  background: #0d5e1b;
+  color: white;
+  font-size: 14px;
+  transition: allease 0.3s;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+
+.price-block__conditions-box__items-title {
+  margin-bottom: 0;
+  margin-right: 35px;
+  font-size: 18px;
+  line-height: 1.24;
+  font-family: RoundPro, sans-serif;
+  font-weight: 900;
+  position: relative;
+  /* padding-left: 5px; */
+}
+
+.price-block__conditions-box__items-title__description {
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 2;
+  font-family: RoundPro, sans-serif;
+  font-weight: 700;
+  margin-right: 3px;
+  padding-top: 1px;
+  position: absolute;
+  padding-right: 5px;
+  left: -20px;
+  top: -2px;
+}
+
+.price-block__conditions-box__items-box__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px;
+}
+
+.price-block__conditions-box__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-block__conditions-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.price-block__conditions-button__btn {
+  padding: 20px 45px;
+  border: 1px solid #3385e4;
+  color: #3385e4;
+  font-size: 15px;
+  font-weight: 700;
+  background: transparent;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+}

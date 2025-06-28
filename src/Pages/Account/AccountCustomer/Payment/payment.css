@@ -1,0 +1,149 @@
+.payment {
+  background: white;
+  padding-bottom: 40px;
+}
+
+.payment-title {
+  font-size: 24px;
+  font-weight: 900;
+  border-bottom: 1px solid #dddddd;
+  padding: 40px 40px 20px 40px;
+}
+
+.payment-box {
+  padding: 40px 40px;
+}
+
+.paymnet-box__input {
+  margin-bottom: 32px !important;
+}
+
+.payment-type__title {
+  color: #999999;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.payment-type__box {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.payment-radion__box {
+  margin-left: 15px;
+}
+
+.payment-radio__label-title {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.payment-radio__label-description {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.payment-radio__label-description__span {
+  margin-left: 17px;
+  color: #999999;
+  font-weight: 300;
+  f01ont-size: 11px;
+  display: inline-block;
+}
+
+.payment-amount {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.payment-amount__text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.payment-promo {
+  background: #F0F0F0;
+  padding: 40px 39px;
+  margin: 40px 0px 0px 0px;
+  line-height: 28px;
+}
+
+.payment-amount__button {
+  color: white;
+  background: #55C112;
+  padding: 13px 24px;
+  border-radius: 30px;
+  border: none;
+  margin-left: 30px;
+}
+
+
+.payment-filter {
+  padding: 57px 40px 61px 40px; 
+  border-bottom: 3px solid #dddddd;
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-filter__title {
+  font-size: 24px;
+  font-weight: 900;
+
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+.transaction-details {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  align-items: end;
+  padding: 26px 40px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.transaction-date:nth-child(5) {
+  text-align: center;
+}
+.transaction-date:nth-child(4){
+  text-align: center;
+}
+
+
+.transaction-type {
+  display: flex;
+  flex-direction: column;
+  color: #999999;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+
+.transaction-amount {
+  color: black;
+}
+
+.transaction-status {
+  text-align: center;
+  padding: 5px 16px;
+  border-radius: 16px;
+}
+
+.status-pending {
+  background: #F6C041;
+}
+.status-completed {
+  background: #55C112;
+  color: white;
+}
+.status-rejected {
+  background: red;
+  color: white;
+}

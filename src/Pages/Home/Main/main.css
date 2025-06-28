@@ -1,0 +1,132 @@
+.main {
+  background-image: url(../../../assents/images/bg-main.png);
+  height: calc(100vh - 188px);
+  background-size: 100% 100%;
+}
+
+.header-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(241, 248, 255);
+  padding: 20px 0;
+}
+.header-main__description {
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+.main-block {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.main-block__text {
+  margin-right: 25px;
+}
+
+.main-block__text-title {
+  font-family: RoundPro, sans-serif;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 23px;
+}
+
+.main-block__text-description {
+  color: rgba(10, 1, 1, 0.5);
+  font-size: 18px;
+  line-height: 1.667;
+  margin: 25px 0px 45px 0px;
+}
+.main-block__text-statistics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-block__text-statistics__box-title {
+  color: #0d5e1b;
+  font-family: RoundPro, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  font-size: 38px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.main-block__text-statistics__box-designation {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #262626;
+}
+
+.main-block__text-statistics__box-description {
+  line-height: 1.286;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.main-block__text-button {
+  display: flex;
+  justify-content: start;
+  margin-top: 50px;
+}
+
+.main-block__text-button__btn-one {
+  padding: 20px 48px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #fff;
+  border: 2px solid #0d5e1b;
+  background: #0d5e1b;
+  font-size: 14px;
+  transition: allease 0.3s;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.main-block__text-button__btn-two {
+  padding: 16px 42px;
+  color: black;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #fff;
+  border: 2px solid #0d5e1b;
+  font-size: 14px;
+  transition: allease 0.3s;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+
+.main-block__description {
+  font-family: PFKidsPro, sans-serif;
+  font-weight: 400;
+  max-width: 440px;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #3385e4;
+  position: relative;
+  margin-top: 42px;
+  margin-bottom: 0;
+}
+
+.main-block__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-block-description-arrow {
+  position: absolute;
+  left: -440px;
+  top: 35px;
+}

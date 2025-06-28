@@ -1,0 +1,71 @@
+.info-avatar {
+  padding: 10px 40px;
+}
+
+.info-avatar__image {
+  width: 150px;
+  height: 150px;
+  object-fit: fill;
+  border-radius: 50%;
+}
+
+.avatar-options {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-option {
+  width: 105px;
+  border-radius: 50%;
+  margin: 10px 10px;
+}
+
+.info-date {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 40px;
+  margin-top: 20px;
+}
+
+.info-text__name {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-settings {
+  padding: 20px 0px 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.info-text__name-text {
+  font-size: 1.7rem;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+.info-text__name-password {
+  background: transparent;
+  color: #4ebd17;
+  border-radius: 50px;
+  padding: 5px 21px;
+  margin-left: 45px;
+  outline: none;
+  border: 1px solid #4ebd17;
+}
+.info-text__name-email {
+  display: inline-block;
+  line-height: 30px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+.info-text__name-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.info-text__name-id {
+  color: #999;
+}

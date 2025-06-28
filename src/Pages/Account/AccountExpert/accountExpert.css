@@ -1,0 +1,22 @@
+
+
+
+.expert-account__modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 40px 10px 40px;
+}
+
+.expert-account__modal-close {
+  font-size: 21px;
+  font-weight: 700;
+}
+.expert-account__modal-close:hover{
+  cursor: pointer;
+}
+
+.expert-account__modal-title {
+  
+  font-weight: 900;
+}

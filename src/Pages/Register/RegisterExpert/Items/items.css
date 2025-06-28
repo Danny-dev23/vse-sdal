@@ -1,0 +1,18 @@
+.items-container {
+  padding: 20px 35px 20px 35px;
+}
+
+
+.work-type-checkbox {
+  flex: 1 1 calc(25% - 10px) !important; /* 4 blocks per row */
+  margin: 5px !important; 
+  box-sizing: border-box !important;
+  justify-content: left !important;
+}
+
+.work-types {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+}

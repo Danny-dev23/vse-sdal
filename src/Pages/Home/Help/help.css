@@ -1,0 +1,45 @@
+.help {
+  background: #feffd1;
+  position: relative;
+  padding: 50px 0px;
+}
+
+.help-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.help-box__img {
+  position: absolute;
+  left: 230px;
+  top: -60px;
+}
+
+.help-box__text-title {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  line-height: 1.2;
+  font-family: RoundPro, sans-serif;
+  font-weight: 900;
+  vertical-align: middle;
+  margin-bottom: 0;
+  margin-left: 55px;
+}
+
+.help-box__button-btn {
+  padding: 20px 48px;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #fff;
+  border: 2px solid #0d5e1b;
+  background: #0d5e1b;
+  color: white;
+  transition: allease 0.3s;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
