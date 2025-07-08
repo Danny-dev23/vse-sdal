@@ -7,6 +7,7 @@ import Price from "./Price/Price";
 import Task from "./Task/Task";
 import Help from "../Home/Help/Help.jsx"
 import Guarantee from "./Guarantee/Guarantee.jsx";
+import Experts from "./Experts/Experts.jsx";
 const home = () => {
   return (
     <div>
@@ -25,6 +26,7 @@ const home = () => {
       <Task/>
       <Help/>
       <Guarantee/>
+      <Experts/>
     </div>
   );
 };
