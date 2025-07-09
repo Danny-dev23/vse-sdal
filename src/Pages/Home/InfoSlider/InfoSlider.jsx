@@ -58,28 +58,49 @@ const InfoSlider = () => {
         "Другая полезная информация для вашей контрольной"
       ],
       buttonText: "УЗНАТЬ СТОИМОСТЬ"
+    },
+    {
+      id: 6,
+      category: "ЭССЕ",
+      title: "Как написать качественное эссе",
+      items: [
+        "Структура и композиция эссе",
+        "Аргументация и примеры",
+        "Другая полезная информация для вашего эссе"
+      ],
+      buttonText: "УЗНАТЬ СТОИМОСТЬ"
     }
   ];
+
+  // Количество слайдов для показа (по 2 карточки)
+  const slidesToShow = 2;
+  const maxSlide = Math.ceil(slides.length / slidesToShow) - 1;
 
   // Автоматическое переключение слайдов
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [maxSlide]);
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
+  };
+
+  // Получить слайды для текущего показа
+  const getCurrentSlides = () => {
+    const startIndex = currentSlide * slidesToShow;
+    return slides.slice(startIndex, startIndex + slidesToShow);
   };
 
   return (
@@ -97,35 +118,34 @@ const InfoSlider = () => {
           </button>
 
           <div className="info-slider__content">
-            <div 
-              className="info-slider__slides"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {slides.map((slide, index) => (
-                <div key={slide.id} className="info-slider__slide">
-                  <div className="info-slider__card">
-                    <div className="info-slider__card-header">
-                      <span className="info-slider__category">{slide.category}</span>
-                    </div>
-                    
-                    <div className="info-slider__card-content">
-                      <h3 className="info-slider__card-title">{slide.title}</h3>
+            <div className="info-slider__slides-wrapper">
+              <div className="info-slider__slides-grid">
+                {getCurrentSlides().map((slide) => (
+                  <div key={slide.id} className="info-slider__slide">
+                    <div className="info-slider__card">
+                      <div className="info-slider__card-header">
+                        <span className="info-slider__category">{slide.category}</span>
+                      </div>
                       
-                      <ul className="info-slider__list">
-                        {slide.items.map((item, itemIndex) => (
-                          <li key={itemIndex} className="info-slider__list-item">
-                            <a href="#" className="info-slider__link">{item}</a>
-                          </li>
-                        ))}
-                      </ul>
-                      
-                      <button className="info-slider__button">
-                        {slide.buttonText}
-                      </button>
+                      <div className="info-slider__card-content">
+                        <h3 className="info-slider__card-title">{slide.title}</h3>
+                        
+                        <ul className="info-slider__list">
+                          {slide.items.map((item, itemIndex) => (
+                            <li key={itemIndex} className="info-slider__list-item">
+                              <a href="#" className="info-slider__link">{item}</a>
+                            </li>
+                          ))}
+                        </ul>
+                        
+                        <button className="info-slider__button">
+                          {slide.buttonText}
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
@@ -135,7 +155,7 @@ const InfoSlider = () => {
         </div>
 
         <div className="info-slider__dots">
-          {slides.map((_, index) => (
+          {Array.from({ length: maxSlide + 1 }, (_, index) => (
             <button
               key={index}
               className={`info-slider__dot ${index === currentSlide ? 'active' : ''}`}
