@@ -8,6 +8,7 @@ import Task from "./Task/Task";
 import Help from "../Home/Help/Help.jsx"
 import Guarantee from "./Guarantee/Guarantee.jsx";
 import Experts from "./Experts/Experts.jsx";
+import InfoSlider from "./InfoSlider/InfoSlider.jsx";
 const home = () => {
   return (
     <div>
@@ -27,6 +28,7 @@ const home = () => {
       <Help/>
       <Guarantee/>
       <Experts/>
+      <InfoSlider/>
     </div>
   );
 };
