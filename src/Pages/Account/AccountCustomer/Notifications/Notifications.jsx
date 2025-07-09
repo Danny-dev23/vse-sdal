@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import WebSocketChat from '../../../../Components/Chat/WebSocketChat';
- // подключаем компонент
+import './notifications.css';
 
 const Notifications = () => {
   const [notifications, setNotifications] = useState([]);
   const [openedChatId, setOpenedChatId] = useState(null);
   const [token, setToken] = useState('');
+  const [selectedNotifications, setSelectedNotifications] = useState(new Set());
 
   useEffect(() => {
     const token = sessionStorage.getItem('access_token');
@@ -32,32 +33,126 @@ const Notifications = () => {
     setOpenedChatId(chatId);
   };
 
+  const closeChat = () => {
+    setOpenedChatId(null);
+  };
+
+  const handleNotificationSelect = (notificationId) => {
+    const newSelected = new Set(selectedNotifications);
+    if (newSelected.has(notificationId)) {
+      newSelected.delete(notificationId);
+    } else {
+      newSelected.add(notificationId);
+    }
+    setSelectedNotifications(newSelected);
+  };
+
+  const handleDeleteNotification = (notificationId) => {
+    setNotifications(notifications.filter(n => n.id !== notificationId));
+  };
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('ru-RU', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    }) + ' в ' + date.toLocaleTimeString('ru-RU', {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  };
+
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Уведомления</h1>
+    <div className="notifications">
+      <h1 className="notifications__title">Уведомления</h1>
       {notifications.length > 0 ? (
-        <ul>
+        <ul className="notifications__list">
           {notifications.map((notification) => (
-            <li key={notification.id} style={{ marginBottom: 20 }}>
-              <p><strong>Заказ:</strong> {notification.order}</p>
-              <p><strong>Эксперт:</strong> {notification.expert}</p>
-              <p><strong>Сообщение:</strong> {notification.message}</p>
-              <p><strong>Статус:</strong> {notification.status}</p>
-              <p><strong>Создано:</strong> {notification.create_at}</p>
-              <p><strong>Обновлено:</strong> {notification.updated_at}</p>
-              <p><strong>ID чата:</strong> {notification.chat_id}</p>
-              {notification.chat_id && (
-                <button onClick={() => openChat(notification.chat_id)}>Открыть чат</button>
-              )}
+            <li key={notification.id} className="notification-item">
+              <div className="notification-header">
+                <div className="notification-date">
+                  <input
+                    type="checkbox"
+                    className="notification-checkbox"
+                    checked={selectedNotifications.has(notification.id)}
+                    onChange={() => handleNotificationSelect(notification.id)}
+                  />
+                  <span>{formatDate(notification.create_at)}</span>
+                </div>
+                <button 
+                  className="notification-delete"
+                  onClick={() => handleDeleteNotification(notification.id)}
+                >
+                  УДАЛИТЬ
+                </button>
+              </div>
+
+              <div className="notification-content">
+                <h3 className="notification-title">
+                  Подробное заполнение — быстрое выполнение!
+                </h3>
+                
+                <div className="notification-message">
+                  <p>Здравствуйте, {notification.expert || 'Данил'}!</p>
+                  <p>Если у вас есть файлы (методические указания, примеры и т.п.), тогда добавьте их к заказу и подробно опишите задание.</p>
+                  <p>Это поможет исполнителю успешно выполнить заказ и, возможно, уменьшит стоимость.</p>
+                </div>
+
+                <div className="notification-actions">
+                  <button className="notification-btn notification-btn--primary">
+                    ДОБАВИТЬ ФАЙЛЫ
+                  </button>
+                  <button className="notification-btn notification-btn--secondary">
+                    РЕДАКТИРОВАТЬ ЗАКАЗ
+                  </button>
+                </div>
+
+                <div className="notification-details">
+                  <div className="notification-meta">
+                    <div className="notification-meta-item">
+                      <span className="notification-meta-label">Тип:</span>
+                      <span>Контрольная</span>
+                    </div>
+                    <div className="notification-meta-item">
+                      <span className="notification-meta-label">Предмет:</span>
+                      <span>vvv</span>
+                    </div>
+                    <div className="notification-meta-item">
+                      <span className="notification-meta-label">Название:</span>
+                      <span>vvvv</span>
+                    </div>
+                    <div className="notification-meta-item">
+                      <span className="notification-meta-label">Срок сдачи:</span>
+                      <span>28 февр. 2025</span>
+                    </div>
+                    <div className="notification-meta-item">
+                      <span className="notification-meta-label">ID (номер) заказа:</span>
+                      <span>6072474</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           ))}
         </ul>
       ) : (
-        <p>Нет уведомлений.</p>
+        <div className="notifications-empty">
+          <h3>Нет уведомлений</h3>
+          <p>Здесь будут отображаться ваши уведомления</p>
+        </div>
       )}
 
       {openedChatId && token && (
-        <WebSocketChat token={token} chatId={openedChatId} />
+        <div className="chat-modal-overlay" onClick={closeChat}>
+          <div className="chat-modal" onClick={(e) => e.stopPropagation()}>
+            <WebSocketChat 
+              token={token} 
+              chatId={openedChatId} 
+              onClose={closeChat}
+            />
+          </div>
+        </div>
       )}
     </div>
   );
