@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from "react";
+import './chatInterface.css';
 
 function Message({ sender, text }) {
   const isCurrentUser = sender.username;
   console.log("вы", isCurrentUser);
   
   return (
-    <div
-      style={{
-        background: isCurrentUser ? "#d1e7dd" : "#fff3cd",
-        margin: isCurrentUser ? "10px 0 10px 20%" : "10px 20% 10px 0",
-        padding: "8px",
-        borderRadius: "5px",
-        textAlign: isCurrentUser ? "right" : "left",
-      }}
-    >
-      <div><strong>{sender.username}</strong></div>
-      <div>{text}</div>
-      <div style={{ fontSize: "0.8em", color: "#999" }}>{new Date().toLocaleTimeString()}</div>
+    <div className={`chat-message ${isCurrentUser ? 'own' : 'other'}`}>
+      <div className="chat-message__bubble">
+        <div className="chat-message__text">{text}</div>
+        <div className="chat-message__meta">
+          <span className="chat-message__time">
+            {new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })}
+          </span>
+          <span className="chat-message__date">
+            {new Date().toLocaleDateString('ru-RU')}
+          </span>
+          {isCurrentUser && <span className="chat-message__status">✓✓</span>}
+        </div>
+      </div>
     </div>
   );
 }
